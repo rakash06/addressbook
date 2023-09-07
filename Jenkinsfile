@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
-        maven "mymaven"
+        maven "maven"
     }
 
     parameters{
@@ -14,7 +14,7 @@ pipeline {
     }
 
     environment{
-        BUILD_SERVER_IP='ec2-user@172.31.13.140'
+        BUILD_SERVER_IP='ec2-user@172.31.43.16'
     }
 
     stages {
@@ -22,7 +22,7 @@ pipeline {
             agent any
             steps {
                 
-                git 'https://github.com/MudassirKhan22/addressbookpractice.git'
+                git 'https://github.com/rakash06/addressbook.git'
                 sh "mvn compile"
                 echo "Env to deploy:${params.Env}"
             }
@@ -52,7 +52,7 @@ pipeline {
            
         }
         
-         stage('Package') {
+         stage('myPackage') {
             //agent {label 'linux-slave1'}
             agent any
            
@@ -80,7 +80,7 @@ pipeline {
         }
 
         stage('Deploy'){
-            agent {label 'linux-slave2'}
+            agent {label 'linux_slave'}
 
                 input{ 
                         message "Please approve to deploy"
