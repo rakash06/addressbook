@@ -14,7 +14,7 @@ pipeline {
     }
 
     environment{
-        BUILD_SERVER_IP='ec2-user@172.31.32.147'
+        BUILD_SERVER_IP='ec2-user@172.31.35.199'
     }
 
     stages {
@@ -80,7 +80,7 @@ pipeline {
         }
 
         stage('Deploy'){
-            agent {label 'linux_slave'}
+            agent {label 'linux_sever'}
 
                 input{ 
                         message "Please approve to deploy"
