@@ -9,7 +9,7 @@ then
     cd /home/ec2-user/addressbookpractice
     git pull origin Practice
 else
-git clone https://github.com/MudassirKhan22/addressbookpractice.git
+git clone https://github.com/rakash06/addressbook.git
 fi
 
 cd /home/ec2-user/addressbookpractice
