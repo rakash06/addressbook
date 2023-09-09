@@ -58,7 +58,7 @@ pipeline {
            
                 steps {
                     script{
-                        sshagent(['build-server-key']) {
+                        sshagent(['deploy new']) {
                             echo "Packaging the code on the slave"
                             
                             //Copy the server-config.sh file on slave2 so that slave2 have the 
