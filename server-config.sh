@@ -7,7 +7,7 @@ if [ -d "addressbookpractice" ]
 then
     echo "Repository is already cloned and exist"
     cd /home/ec2-user/addressbookpractice
-    git pull origin Practice
+    git pull origin demo-practice
 else
 git clone https://github.com/rakash06/addressbook.git
 fi
