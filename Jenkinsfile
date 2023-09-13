@@ -70,7 +70,7 @@ pipeline {
                             //have the required tools on the slave2. To get the required tools on
                             //slave2 we will install the tools and to install the tools we write
                             //the commands in a separate file called server-config.sh
-                            sh "ssh -o StrictHostKeyChecking=no ${BUILD_SERVER_IP} 'bash ~/home/ec2-user/server-config.sh'"
+                            sh "ssh -o StrictHostKeyChecking=no ${BUILD_SERVER_IP} 'bash /home/ec2-user/server-config.sh'"
                             echo "Deploying app version:${params.Appversion}"
                         }
                     }
