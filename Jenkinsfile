@@ -14,7 +14,7 @@ pipeline {
     }
 
     environment{
-        BUILD_SERVER_IP='ec2-user@172.31.35.199'
+        BUILD_SERVER_IP='ec2-user@172.31.33.115'
     }
 
     stages {
@@ -58,7 +58,7 @@ pipeline {
            
                 steps {
                     script{
-                        sshagent(['deploy new']) {
+                        sshagent(['ssh-agent']) {
                             echo "Packaging the code on the slave"
                             
                             //Copy the server-config.sh file on slave2 so that slave2 have the 
