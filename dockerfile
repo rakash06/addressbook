@@ -1,6 +1,6 @@
 From tomcat:8.5.72-jdk8-openjdk-buster
 
-LABLE key="akash"
+LABEl key="akash"
 
 
 ENV MAVEN_HOME /uar/share/maven
